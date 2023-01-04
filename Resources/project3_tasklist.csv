@@ -1,0 +1,36 @@
+Project Tasks,
+Visualizations,
+Main Page: map of US parks with info about each park (interactive),
+1) Map with overlay of US national parks,
+2) Picture/icon of one region that takes you to that specific region (next page shows this info: general information about the parks in select region; bar chart showing # of visits in each park; and images of the parks),
+3) Dropdown with a (bar/pie/line) chart that shows # of parks per state in each region; potentially colorcode the bars with activities in each state; and also add a legend to depict colors for each activity,
+,
+Other Pages (resulting from 2nd visualization):,
+1) Drop down for top 10 parks,
+"2) Ranking parks by regions (East Coast, Central, West Coast)",
+3) Chart with rank of states with most parks,
+4) About page: synopsis/scope of project w/team info,
+5) Prospective park activities (could be another drop down),
+6) Potentially use webcam access to select parks; link,
+7) Section on main page with select info about top 10 parks (could be any kind of info),
+,
+Steps:,
+1) Find relevant data sources with info on parks,
+2) Retrieving data and conducting data cleaning/processing,
+3) Extract activity data,GP
+"3) Storing activity data and Kaggle data into our database (e.g. SQL, Mongo)","QX, YZ"
+4) Query our database to analyze the data (use Pandas) ,TBD
+5) Use Flask to make API call (refer to recent assignment - w/sqlite analysis; sqlalchemy),EE
+6) Use HTML and JavaScript libraries to create our front end webpages (potential pages listed above),WC ++
+,
+Presentation:,
+Do we need slides? Yes & no,
+Let's do a couple of slides with project objective/overview; then swing to our webpage,
+Focus on storytelling about our visualizations,
+,
+Github repo:,
+Do we work on one main repo? Yep,WC
+,
+HTML; Javascript,
+Data Analysis w/pandas,
+Back end stuff,
