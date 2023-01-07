@@ -5,8 +5,6 @@ from bson import json_util, ObjectId
 import json
 
 
-#app = Flask(__name__)
-
 #################################################
 # Database Setup
 #################################################
@@ -19,6 +17,7 @@ kaggle = db.kaggle
 latlong=db.latlong
 dataworld=db.dataworld
 activity=db.activity
+activity2=db.activity2
 #################################################
 # Flask Setup
 #################################################
@@ -38,6 +37,7 @@ def welcome():
         f"/activity<br/>"
         f"/dataworld<br/>"
         f"/latlong<br/>"
+        f"/activity2"
     )
 
 @app.route("/kaggle")
@@ -62,16 +62,16 @@ def dataworldData():
     #return the data
     return jsonify(dataworld_data_json_data)
 
-@app.route("/activity")
-def activityData():
+@app.route("/activity2")
+def activity2Data():
     # write a statement that finds all the items in the db and sets it to a variable
-    activity_data= list(activity.find())
+    activity2_data= list(activity2.find())
     #Dump loaded BSON to valid JSON string and reload it as dict
-    activity_data_json_data=json.loads(json_util.dumps(activity_data, indent = 2))
+    activity2_data_json_data=json.loads(json_util.dumps(activity2_data, indent = 2))
     
 
     #return the data
-    return jsonify(activity_data_json_data)
+    return jsonify(activity2_data_json_data)
 
 
 
@@ -81,12 +81,11 @@ def latlongData():
     latlong_data= list(latlong.find())
     
     #Dump loaded BSON to valid JSON string and reload it as dict
-    latlong_json_data = json.loads(json_util.dumps(latlong_data,))
+    latlong_json_data = json.loads(json_util.dumps(latlong_data,indent = 2 ))
        #print(latlong_json_data)
 
     #return the data
     return  jsonify(latlong_json_data)
-
 
 
 
