@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NationalTreasure</title>
+
+    <!-- Use Bootstrap for responsive page -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Masonry package -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>  
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+    <!-- Leaflet JavaScript code -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script> 
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+      
+    
+</head>
+<body>       
+    <!-- Header section here -->
+    <header class="main-header">
+        <nav class="nav main-nav">
+            <ul>
+                <!-- <li><a href="index.html">HOME</a></li>                 -->
+                <li><a href="/templates/about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+        <h1 class="project-name">National Treasure</h1>
+    </header>    
+
+    <section class="content-section container">
+        <!-- The div where we'll insert our map and images linking to regions -->
+        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+            <table>
+                <div class="container-fluid">
+                    <h2 class="section-header">Find Your Next Adventure</h2>
+                    <tr>
+                        <td>
+                            <div id="map">Map Section</div>
+                        </td>
+                        <td>
+                            <div>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><a href="/templates/east.html">EAST REGION</a></li>
+                                    <li class="list-group-item"><a href="/templates/central.html">CENTRAL REGION</a></li>
+                                    <li class="list-group-item"><a href="/templates/west.html">WEST REGION</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </div>
+            </table>
+            
+            <!-- The div where we'll insert our interactive bar plot with a dropdown -->
+            <div class="dropdown text-center">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select a Region
+                </button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">East Region</a></li>
+                <li><a class="dropdown-item" href="#">Central Region</a></li>
+                <li><a class="dropdown-item" href="#">West Region</a></li>
+                </ul>
+            </div>
+            <div id="plot">JS Plot showing # of Parks per State</div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>Courtesy of the National Treasure Hunters (Elamathi, Glenn, Qianna, Yuteng and Wilson) © 2022</p>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script type="text/javascript" src="js/map.js"></script>
+
+    <!-- Bootstrap CSS -->
+   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    
+</body>
+</html>
