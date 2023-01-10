@@ -23,24 +23,82 @@ activity2=db.activity2
 #################################################
 app = Flask(__name__)
 
+#################################################
+# Flask Routes - HTML
+#################################################
+##Home Page(index.html)
+@app.route("/Home")
+def index():
+    return render_template("index.html", pages={
+        "Home": "active",
+        "East"  :"",
+        "West"  :"",
+        "Central":"",
+        "About": ""
+    })
+#east.html
+@app.route("/East")
+def index():
+    return render_template("east.html", pages={
+        "Home": "",
+        "East"  :"active",
+        "West"  :"",
+        "Central":"",
+        "About": ""
+    })
+
+#west.html    
+@app.route("/West")
+def index():
+    return render_template("west.html", pages={
+        "Home": "",
+        "East"  :"",
+        "West"  :"active",
+        "Central":"",
+        "About": ""
+    })
+
+#central.html
+@app.route("/Central")
+def index():
+    return render_template("central.html", pages={
+        "Home": "",
+        "East"  :"",
+        "West"  :"",
+        "Central":"active",
+        "About": ""
+    })
+
+#about.html
+@app.route("/About")
+def index():
+    return render_template("about.html", pages={
+        "Home": "",
+        "East"  :"",
+        "West"  :"",
+        "Central":"",
+        "About": "active"
+    })
+
+
 
 #################################################
-# Flask Routes
+# Flask Routes-API
 #################################################
 
-@app.route("/")
+@app.route("/api")
 def welcome():
     """List all available api routes."""
     return (
         f"Available Routes:<br/>"
-        f"/kaggle<br/>"
-        f"/activity<br/>"
-        f"/dataworld<br/>"
-        f"/latlong<br/>"
-        f"/activity2"
+        f"/api/kaggle<br/>"
+        f"/api/activity<br/>"
+        f"/api/dataworld<br/>"
+        f"/api/latlong<br/>"
+        f"/api/activity2"
     )
 
-@app.route("/kaggle")
+@app.route("/api/kaggle")
 def kaggleData():
     # write a statement that finds all the items in the db and sets it to a variable
     kaggle_data= list(kaggle.find())
@@ -51,7 +109,18 @@ def kaggleData():
     #return the data
     return jsonify(kaggle_data_json_data)
 
-@app.route("/dataworld")
+@app.route("/api/activity")
+def activityData():
+    # write a statement that finds all the items in the db and sets it to a variable
+    activity_data= list(activity.find())
+    #Dump loaded BSON to valid JSON string and reload it as dict
+    activity_data_json_data=json.loads(json_util.dumps(activity_data, indent = 2))
+    
+
+    #return the data
+    return jsonify(activity_data_json_data)
+
+@app.route("/api/dataworld")
 def dataworldData():
     # write a statement that finds all the items in the db and sets it to a variable
     dataworld_data= list(dataworld.find())
@@ -62,7 +131,7 @@ def dataworldData():
     #return the data
     return jsonify(dataworld_data_json_data)
 
-@app.route("/activity2")
+@app.route("/api/activity2")
 def activity2Data():
     # write a statement that finds all the items in the db and sets it to a variable
     activity2_data= list(activity2.find())
@@ -75,7 +144,7 @@ def activity2Data():
 
 
 
-@app.route("/latlong")
+@app.route("/api/latlong")
 def latlongData():
     # write a statement that finds all the items in the db and sets it to a variable
     latlong_data= list(latlong.find())

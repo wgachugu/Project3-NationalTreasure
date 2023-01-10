@@ -5,3 +5,10 @@
 	margin: 20px;
 	border: 1px solid black;
 }
+
+#pie {
+	height: 300px;
+	width: 90%;
+	padding: 20px;
+	margin: 20px;
+}
