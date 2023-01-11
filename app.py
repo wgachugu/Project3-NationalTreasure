@@ -1,4 +1,4 @@
-from flask import Flask, render_template,jsonify
+from flask import Flask, render_template, jsonify
 #from bson.json_util import dumps, loads
 import pymongo
 from bson import json_util, ObjectId
@@ -27,7 +27,7 @@ app = Flask(__name__)
 # Flask Routes - HTML
 #################################################
 ##Home Page(index.html)
-@app.route("/Home")
+@app.route("/")
 def index():
     return render_template("index.html", pages={
         "Home": "active",
@@ -37,8 +37,8 @@ def index():
         "About": ""
     })
 #east.html
-@app.route("/East")
-def index():
+@app.route("/east")
+def east():
     return render_template("east.html", pages={
         "Home": "",
         "East"  :"active",
@@ -48,8 +48,8 @@ def index():
     })
 
 #west.html    
-@app.route("/West")
-def index():
+@app.route("/west")
+def west():
     return render_template("west.html", pages={
         "Home": "",
         "East"  :"",
@@ -59,8 +59,8 @@ def index():
     })
 
 #central.html
-@app.route("/Central")
-def index():
+@app.route("/central")
+def central():
     return render_template("central.html", pages={
         "Home": "",
         "East"  :"",
@@ -70,8 +70,8 @@ def index():
     })
 
 #about.html
-@app.route("/About")
-def index():
+@app.route("/about")
+def about():
     return render_template("about.html", pages={
         "Home": "",
         "East"  :"",
