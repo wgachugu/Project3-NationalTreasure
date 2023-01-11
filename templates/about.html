@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 
     <!-- Our CSS -->
-    <link rel="stylesheet" href="../css/stylesv2.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/stylesv2.css')}}">
 
 </head>
 <body>
@@ -50,6 +50,71 @@
     </header>
 
     <h1 class="text-center">About</h1>
+
+    <div class="container">  
+      <div class="row about-row row-odd">
+        <div class="col-md-6 col-sm-12 text-box">
+          <h2>NationalTreasure</h2>
+          <p>NationalTreasure is an initiative whereby a group of aspiring full stack developers have consolidated data on popular US National Parks in a
+              visual manner using interactive charts. We sourced data from <a
+              href="https://data.world/kevinnayar/us-national-parks" target="_blank"
+              rel="noreferrer">data.world</a> and <a href="https://www.kaggle.com/datasets/thedevastator/the-united-states-national-parks" target="_blank"
+              rel="noreferrer">Kaggle</a> and created plots from a detailed collection of 59 U.S. National Parks. Data on each of the 59 U.S. National Parks includes park size, location coordinates, number of annual visitors, among other useful information. Our website divides the parks by three U.S. regions and provide visualizations on the top 5 most frequently visited parks within each region. We also visualize an overlay of all the National Parks using a map.
+          </p>
+        </div>
+        <div class="col-md-6 col-sm-12 image-box">
+            <img src="{{url_for('static', filename='images/about/about1.png')}}" height="300" width="300">
+        </div>
+      </div>
+      <div class="row about-row">
+        <div class="col-md-6 col-sm-12 image-box">
+            <img src="{{url_for('static', filename='images/about/about2.png')}}" height="300" width="300">
+        </div>
+        <div class="col-md-6 col-sm-12 text-box">
+          <h2>Data Components</h2>
+          <p>Some of the technical components used in the delivery of this project are listed below:</p>
+          <ol>
+              <li><a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer">Flask</a></li>
+              <li><a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">MongoDB</a></li>
+              <li><a href="https://www.jupyter.org/" target="_blank" rel="noreferrer">Jupyter Notebook</a></li>
+              <li><a href="https://d3js.org/" target="_blank" rel="noreferrer">D3 JS</a></li>
+              <li><a href="https://plotly.com/javascript/" target="_blank" rel="noreferrer">Plotly</a></li>
+              <li><a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">Bootstrap</a></li>
+              <li><a href="https://masonry.desandro.com/" target="_blank" rel="noreferrer">Masonry</a></li>
+              <li><a href="https://leafletjs.com/" target="_blank" rel="noreferrer">Leaflet</a></li>
+          </ol>
+        </div>
+      </div>
+      <div class="row about-row row-odd">
+        <div class="col-md-6 col-sm-12 text-box">
+          <h2>Project Contributors</h2>
+          <p>Meet Georgia Tech's finest aspiring full stack developers that assembled this project:</p>
+          <ul>
+            <li>Elamathi Elangovan</li>
+            <li>Glenn Purcell</li>
+            <li>Qianna Xu</li>
+            <li>Wilson Chira</li>
+            <li>Yuteng Zhang</li>
+          </ul>
+          <a href="https://github.com/wgachugu/Project3-NationalTreasure" target="_blank" rel="noreferrer">Visit our GitHub repository</a>
+        </div>
+        <div class="col-md-6 col-sm-12 image-box">
+            <img src="{{url_for('static', filename='images/about/about3.png')}}" height="300" width="300">
+        </div>
+      </div>
+      <div class="row about-row">
+        <div class="col-md-6 col-sm-12 image-box">
+          <img src="{{url_for('static', filename='images/about/about4.png')}}" height="300" width="300">
+        </div>
+        <div class="col-md-6 col-sm-12 text-box">
+            <h2>Additional Citations</h2>
+            <p>Images used on NationalTreasure have been compiled from <a
+                    href="https://storyset.com/" target="_blank" rel="noreferrer">Story Set</a> and other publicly available online image sources.
+            </p>
+        </div>
+        
+    </div>
+    </div>
 
     
 
