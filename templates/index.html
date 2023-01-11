@@ -23,7 +23,8 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 
     <!-- Our CSS -->
-    <link rel="stylesheet" href="../css/stylesv2.css">
+    <!-- <link rel="stylesheet" href="../css/stylesv2.css"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/stylesv2.css')}}">
 
 </head>
 
@@ -126,8 +127,10 @@
         
     </div>
 
-<!-- JavaScript file -->
-<script type="text/javascript" src="../js/map.js"></script>
+<!-- JavaScript files -->
+<!-- <script type="text/javascript" src="../js/map.js"></script> -->
+<script type="text/javascript" src="{{url_for('static', filename='js/map.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/plot.js')}}"></script>
 
 <!--Bootstrap tags  -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
