@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-#from bson.json_util import dumps, loads
+from bson.json_util import dumps, loads
 import pymongo
 from bson import json_util, ObjectId
 import json
@@ -30,54 +30,54 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("index.html", pages={
-        "Home": "active",
-        "East"  :"",
-        "West"  :"",
-        "Central":"",
-        "About": ""
+        "home": "active",
+        "east"  :"",
+        "west"  :"",
+        "central":"",
+        "about": ""
     })
 #east.html
 @app.route("/east")
 def east():
     return render_template("east.html", pages={
-        "Home": "",
-        "East"  :"active",
-        "West"  :"",
-        "Central":"",
-        "About": ""
+        "home": "",
+        "east"  :"active",
+        "west"  :"",
+        "central":"",
+        "about": ""
     })
 
 #west.html    
 @app.route("/west")
 def west():
     return render_template("west.html", pages={
-        "Home": "",
-        "East"  :"",
-        "West"  :"active",
-        "Central":"",
-        "About": ""
+        "home": "",
+        "east"  :"",
+        "west"  :"active",
+        "central":"",
+        "about": ""
     })
 
 #central.html
 @app.route("/central")
 def central():
     return render_template("central.html", pages={
-        "Home": "",
-        "East"  :"",
-        "West"  :"",
-        "Central":"active",
-        "About": ""
+        "home": "",
+        "east"  :"",
+        "west"  :"",
+        "central":"active",
+        "about": ""
     })
 
 #about.html
 @app.route("/about")
 def about():
     return render_template("about.html", pages={
-        "Home": "",
-        "East"  :"",
-        "West"  :"",
-        "Central":"",
-        "About": "active"
+        "home": "",
+        "east"  :"",
+        "west"  :"",
+        "central":"",
+        "about": "active"
     })
 
 
