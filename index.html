@@ -24,7 +24,7 @@
 
     <!-- Our CSS -->
     <!-- <link rel="stylesheet" href="../css/stylesv2.css"> -->
-    <link rel="stylesheet" href="{{url_for('static', filename='css/stylesv2.css')}}">
+    <link rel="stylesheet" href="/Project3-NationalTreasure/static/css/stylesv2.css">
 
 </head>
 
@@ -33,27 +33,27 @@
     <header>
         <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="{{url_for('index')}}">NationalTreasure</a>
+              <a class="navbar-brand" href="/Project3-NationalTreasure/">NationalTreasure</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/Project3-NationalTreasure/">Home</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Region
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="{{url_for('east')}}">East</a></li>
-                      <li><a class="dropdown-item" href="{{url_for('west')}}">West</a></li>
-                      <li><a class="dropdown-item" href="{{url_for('central')}}">Central</a></li>
+                      <li><a class="dropdown-item" href="/Project3-NationalTreasure/east/">East</a></li>
+                      <li><a class="dropdown-item" href="/Project3-NationalTreasure/west/">West</a></li>
+                      <li><a class="dropdown-item" href="/Project3-NationalTreasure/central/">Central</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{url_for('about')}}">About</a>
+                    <a class="nav-link" href="/Project3-NationalTreasure/about/">About</a>
                   </li>                                 
                 </ul>
               </div>
@@ -129,8 +129,8 @@
 
 <!-- JavaScript files -->
 <!-- <script type="text/javascript" src="../js/map.js"></script> -->
-<script type="text/javascript" src="{{url_for('static', filename='js/map.js')}}"></script>
-<script type="text/javascript" src="{{url_for('static', filename='js/plot.js')}}"></script>
+<script type="text/javascript" src="/Project3-NationalTreasure/static/js/map.js"></script>
+<script type="text/javascript" src="/Project3-NationalTreasure/static/js/plot.js"></script>
 
 <!--Bootstrap tags  -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
