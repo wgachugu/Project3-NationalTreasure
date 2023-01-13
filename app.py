@@ -126,10 +126,11 @@ def dataworldData():
     dataworld_data= list(dataworld.find())
     #Dump loaded BSON to valid JSON string and reload it as dict
     dataworld_data_json_data=json.loads(json_util.dumps(dataworld_data, indent = 2))
-    
+    print(dataworld_data_json_data)
 
     #return the data
     return jsonify(dataworld_data_json_data)
+    
 
 @app.route("/api/activity2.json")
 def activity2Data():
@@ -151,7 +152,7 @@ def latlongData():
     
     #Dump loaded BSON to valid JSON string and reload it as dict
     latlong_json_data = json.loads(json_util.dumps(latlong_data,indent = 2 ))
-       #print(latlong_json_data)
+    # print(latlong_json_data)
 
     #return the data
     return  jsonify(latlong_json_data)
