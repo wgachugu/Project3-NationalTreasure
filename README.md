@@ -13,4 +13,12 @@ The user interface is designed to be user-friendly and easy to navigate, allowin
 
 Overall, the National Parks project is an ideal tool for nature enthusiasts, hikers, and anyone looking to explore and learn more about the national parks of the United States and territories.
 
+# Getting Started
+
+* PyMongo
+
+
+To run the application, you will need to install the following dependencies:
+
+* Flask
 
