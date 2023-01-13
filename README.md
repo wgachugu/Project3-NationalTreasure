@@ -15,10 +15,30 @@ Overall, the National Parks project is an ideal tool for nature enthusiasts, hik
 
 # Getting Started
 
-* PyMongo
-
-
-To run the application, you will need to install the following dependencies:
-
 * Flask
+* PyMongo
+* Additional dependencies can be found in the requirements.txt file
+
+Once the dependencies are installed, you can run the application by using the command 'python app.py' in your terminal. The application will then be hosted on [localhost:5000](http://127.0.0.1:5000/).
+
+# Data Sources
+
+The data for this application was sourced using the following methods:
+
+* Web API
+* Web scraping
+* .csv files
+
+# Built With
+
+* Flask - Web framework
+* PyMongo - MongoDB driver for Python
+* Jinja2 - Templating engine
+
+# Project Participants:
+
+* Elamathi Elangovan
+
+
+
 
