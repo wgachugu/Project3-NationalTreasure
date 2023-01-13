@@ -1,6 +1,38 @@
 # Project3-NationalTreasure
 
 
-#Overview:
+National Parks Project
+The National Parks project is a web application that allows users to explore national parks across the United States. The application utilizes data from various sources including Kaggle, Data World, and Lat Long to provide users with detailed information about each park including its location, activities, and historical significance.
 
-The National Parks project is a web application that allows users to explore national parks across the United States. The application utilizes data from various sources including Kaggle, Data World, and Lat Long to provide users with detailed information about each park including its location, activities, and historical significance. The user interface is designed to be user-friendly and easy to navigate, allowing users to filter parks by region and view detailed information about each park. The backend of the application is built using a Flask server and MongoDB to handle data storage and retrieval. This allows for efficient and seamless data retrieval, providing users with the most up-to-date information about the parks. The data for the application was sourced using a combination of web API's, web scraping, and .csv files. Overall, the National Parks project is an ideal tool for nature enthusiasts, hikers, and anyone looking to explore and learn more about the national parks of the United States and territories.
+The user interface is designed to be user-friendly and easy to navigate, allowing users to filter parks by region and view detailed information about each park. The backend of the application is built using a Flask server and MongoDB to handle data storage and retrieval. This allows for efficient and seamless data retrieval, providing users with the most up-to-date information about the parks.
+
+Overall, the National Parks project is an ideal tool for nature enthusiasts, hikers, and anyone looking to explore and learn more about the national parks of the United States and territories.
+
+The data utilized multiple data sources: web api, webscraping and .csv datasets.
+
+Getting Started
+To run the application, you will need to install the following dependencies:
+
+Flask
+PyMongo
+Additional dependencies can be found in the requirements.txt file
+Once the dependencies are installed, you can run the application by using the command python app.py in your terminal. The application will then be hosted on localhost:5000.
+
+Data Sources
+The data for this application was sourced using the following methods:
+
+Web API
+Web scraping
+.csv files
+Built With
+Flask - Web framework
+PyMongo - MongoDB driver for Python
+Jinja2 - Templating engine
+
+Authors
+
+Names
+
+Acknowledgments
+
+Hat tip to
