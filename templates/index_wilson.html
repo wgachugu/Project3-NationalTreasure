@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NationalTreasure</title>
+    
+    <!-- Bootstrap tag -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+    <!-- Leaflet JavaScript code -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script> 
+
+    <!-- Masonry JavaScript plugin-->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+
+    <!-- Our CSS -->
+    <!-- <link rel="stylesheet" href="../css/stylesv2.css"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/stylesv2.css')}}">
+
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{{url_for('index')}}">NationalTreasure</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Region
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{{url_for('east')}}">East</a></li>
+                      <li><a class="dropdown-item" href="{{url_for('west')}}">West</a></li>
+                      <li><a class="dropdown-item" href="{{url_for('central')}}">Central</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('about')}}">About</a>
+                  </li>                                 
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <!-- Content section -->
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center">An Overlay of Some Popular National Parks in the US</h2>
+            </div>
+        </div>
+        <!-- Interactive map -->
+        <div class="row">
+            <div class="col-12">
+                <div id="map"></div>
+            </div>    
+        </div>
+        
+        <!-- Activating Masonry integration -->
+        <div class="row data-masonry='{percentPosition: true }'">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">East Region</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="east.html" class="btn btn-primary">More info on the East Region</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Central Region</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="central.html" class="btn btn-primary">More info on the Central Region</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">West Region</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="west.html" class="btn btn-primary">More info on the West Region</a>
+                    </div>
+                  </div>
+            </div>
+        </div> 
+        
+        <!-- Interactive plot -->
+        <div class="row">
+            <div class="col-12">
+                <div class="btn-group select">
+                    <select class="form-select" id=#>
+                        <option selected value="east">East</option>
+                        <option value="central">Central</option>
+                        <option value="west">West</option>                        
+                    </select>
+                </div>
+                <div id="plot">Plot goes here</div>
+            </div>    
+        </div>      
+
+        
+    </div>
+
+<!-- JavaScript files -->
+<!-- <script type="text/javascript" src="../js/map.js"></script> -->
+<script type="text/javascript" src="{{url_for('static', filename='js/map.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/plot.js')}}"></script>
+
+<!--Bootstrap tags  -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

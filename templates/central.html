@@ -12,6 +12,7 @@
     <!-- Masonry JavaScript plugin-->
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <!-- Our CSS -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/stylesv2.css')}}">
 
@@ -53,44 +54,41 @@
     <!-- Content section  -->
     <div class="container">
       <h1 class="text-center">Central Region</h1>
+      <h3 class="text-center">Top 5 Most Popular Parks</h3>
       <div class="row">
-          <div class="col">
-              <div class="btn-group select">
-                  <select class="form-select" id=#>
-                      <option selected value="east">Most popular park</option>
-                      <option value="central">2nd most popular park</option>
-                      <option value="west">3rd most popular park</option> 
-                      <option value="west">4th most popular park</option>
-                      <option value="west">5th most popular park</option>                       
-                  </select>
-              </div>
-          </div>
+        <div class="text-center">
+          <button id="central1">Rocky Mountain</button>
+          <button id="central2">Indiana Dunes</button>
+          <button id="central3">Cuyahoga Valley</button>
+          <button id="central4">Hot Springs</button>
+          <button id="central5">Badlands</button>
+        </div>
       </div>
       <div class="row">
-          <div class="col">
-              <div class="card" style="width: 50rem;">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Name of the Park</h5>
-                    <p class="card-text">Description of the park</p>
-                    <a href="#" class="btn btn-primary">Link to the park's website</a>
-                  </div>
-                </div>
-          </div>
+        <div class="central-img text-center"></div>        
       </div>
       <div class="row">
-          <div class="col">
-              <div class="card rounded-circle" style="width: 50rem;" id="pie">
-                  Pie Chart
-              </div>
-          </div>
+        <div class="col">
+          <img src="{{url_for('static', filename='images/Central/Activities_central.png')}}" class="img-fluid" alt="Activities at Top 5 Most Visited Parks in Central US">
+        </div> 
       </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <img src="{{url_for('static', filename='images/Central/Central_pie.png')}}" class="img-fluid" alt="Top 5 Most Visited Parks in Central US">
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <img src="{{url_for('static', filename='images/Central/Central_bar.png')}}" class="img-fluid" alt="Number of National Parks by State in Central US">
+        </div>
+      </div>      
     </div>
 
 <!-- JavaScript files -->
-<!-- <script type="text/javascript" src="../js/map.js"></script> -->
-<!-- <script type="text/javascript" src="{{url_for('static', filename='js/map.js')}}"></script> -->
-<script type="text/javascript" src="{{url_for('static', filename='js/plot.js')}}"></script>
+
+<script type="text/javascript" src="{{url_for('static', filename='js/Central/central1.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/Central/central2.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/Central/central3.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/Central/central4.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/Central/central5.js')}}"></script>
     
 <!--Bootstrap tags  -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
