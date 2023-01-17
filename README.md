@@ -25,10 +25,15 @@ Overall, the National Parks project is an ideal tool for nature enthusiasts, hik
 * Jinja2 -  is a templating engine for Python that allows for the separation of the presentation logic and the application logic. It is a powerful and flexible engine             that is often used with Flask to render templates and generate dynamic HTML pages.
 * MongoDB Compass: Allows users to easily interact with and manage their MongoDB databases without having to use the command line interface.
 
+# Setup
 
-# Project Participants:
+* Build the Mongodb and collections by using the Dataframe_to_MongoDB_elaversion.ipynb.
+* in Visual Studio, select the app.py and in the command line execute by using Python app.py
+* Use http://127.0.0.1:5000/ in Google Chrome to render the the webpage. 
 
-* Elamathi Elangovan, Glenn Purcell, Qianna Xu, Wilson Chira, Yuteng Zhang.
+# Project Team:
+
+The project team includes Elamathi Elangovan, Glenn Purcell, Qianna Xu, Wilson Chira, and Yuteng Zhang.
 
 
 
