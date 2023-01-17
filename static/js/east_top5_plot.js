@@ -32,14 +32,14 @@ fetch("/api/kaggle")
     const eastParks = data.filter(park => park.Region === "East");
 
     // Sort filtered data by visitors(2021) in descending order
-    eastParks.sort((a, b) => b["visitors(2021)"] - a["visitors(2021)"]);
+    eastParks.sort((a, b) => b["Recreation visitors (2021)[11]"] - a["Recreation visitors (2021)[11]"]);
 
     // Get the top 5 most visited parks in Central region
     const topFiveEastParks = eastParks.slice(0, 5);
 
     // Extract the names and visitor counts of the top five Central parks
     const parkNames = topFiveEastParks.map(park => park.Name);
-    const parkVisitors = topFiveEastParks.map(park => park["visitors(2021)"]);
+    const parkVisitors = topFiveEastParks.map(park => park["Recreation visitors (2021)[11]"]);
 
     // Use Plotly.js to create the bar chart
     const plotDiv = document.getElementById("plot");
