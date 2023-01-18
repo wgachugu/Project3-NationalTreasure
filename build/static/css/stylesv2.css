@@ -1,0 +1,15 @@
+#map {
+	height: 800px;
+	width: 100%;
+	padding: 20px;
+	margin: 20px;
+	border: 1px solid black;
+}
+
+#plot {
+	height: 300px;
+	width: 100%;
+	padding: 20px;
+	margin: 20px;
+	/* border: 1px solid black; */
+}
