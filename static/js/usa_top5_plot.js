@@ -1,4 +1,4 @@
-fetch("/api/kaggle.json")
+fetch("Project3-NationalTreasure/api/kaggle.json")
   .then(response => {
     if (!response.ok) {
       throw new Error("HTTP error " + response.status);
