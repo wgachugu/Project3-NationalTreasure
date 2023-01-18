@@ -1,14 +1,15 @@
-#map, #plot {
-	height: 300px;
-	width: 90%;
+#map {
+	height: 800px;
+	width: 100%;
 	padding: 20px;
 	margin: 20px;
 	border: 1px solid black;
 }
 
-#pie {
+#plot {
 	height: 300px;
-	width: 90%;
+	width: 100%;
 	padding: 20px;
 	margin: 20px;
+	/* border: 1px solid black; */
 }
