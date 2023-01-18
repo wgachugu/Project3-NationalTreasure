@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-from bson.json_util import dumps, loads
+#from bson.json_util import dumps, loads
 import pymongo
 from bson import json_util, ObjectId
 import json
@@ -30,54 +30,54 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("index.html", pages={
-        "home": "active",
-        "east"  :"",
-        "west"  :"",
-        "central":"",
-        "about": ""
+        "Home": "active",
+        "East"  :"",
+        "West"  :"",
+        "Central":"",
+        "About": ""
     })
 #east.html
-@app.route("/east/")
+@app.route("/east")
 def east():
     return render_template("east.html", pages={
-        "home": "",
-        "east"  :"active",
-        "west"  :"",
-        "central":"",
-        "about": ""
+        "Home": "",
+        "East"  :"active",
+        "West"  :"",
+        "Central":"",
+        "About": ""
     })
 
 #west.html    
-@app.route("/west/")
+@app.route("/west")
 def west():
     return render_template("west.html", pages={
-        "home": "",
-        "east"  :"",
-        "west"  :"active",
-        "central":"",
-        "about": ""
+        "Home": "",
+        "East"  :"",
+        "West"  :"active",
+        "Central":"",
+        "About": ""
     })
 
 #central.html
-@app.route("/central/")
+@app.route("/central")
 def central():
     return render_template("central.html", pages={
-        "home": "",
-        "east"  :"",
-        "west"  :"",
-        "central":"active",
-        "about": ""
+        "Home": "",
+        "East"  :"",
+        "West"  :"",
+        "Central":"active",
+        "About": ""
     })
 
 #about.html
-@app.route("/about/")
+@app.route("/about")
 def about():
     return render_template("about.html", pages={
-        "home": "",
-        "east"  :"",
-        "west"  :"",
-        "central":"",
-        "about": "active"
+        "Home": "",
+        "East"  :"",
+        "West"  :"",
+        "Central":"",
+        "About": "active"
     })
 
 
@@ -86,19 +86,19 @@ def about():
 # Flask Routes-API
 #################################################
 
-@app.route("/api/")
+@app.route("/api")
 def welcome():
     """List all available api routes."""
     return (
         f"Available Routes:<br/>"
-        f"/api/kaggle.json<br/>"
-        f"/api/activity.json<br/>"
-        f"/api/dataworld.json<br/>"
-        f"/api/latlong.json<br/>"
-        f"/api/activity2.json"
+        f"/api/kaggle<br/>"
+        f"/api/activity<br/>"
+        f"/api/dataworld<br/>"
+        f"/api/latlong<br/>"
+        f"/api/activity2"
     )
 
-@app.route("/api/kaggle.json")
+@app.route("/api/kaggle")
 def kaggleData():
     # write a statement that finds all the items in the db and sets it to a variable
     kaggle_data= list(kaggle.find())
@@ -109,7 +109,7 @@ def kaggleData():
     #return the data
     return jsonify(kaggle_data_json_data)
 
-@app.route("/api/activity.json")
+@app.route("/api/activity")
 def activityData():
     # write a statement that finds all the items in the db and sets it to a variable
     activity_data= list(activity.find())
@@ -120,7 +120,7 @@ def activityData():
     #return the data
     return jsonify(activity_data_json_data)
 
-@app.route("/api/dataworld.json")
+@app.route("/api/dataworld")
 def dataworldData():
     # write a statement that finds all the items in the db and sets it to a variable
     dataworld_data= list(dataworld.find())
@@ -131,7 +131,7 @@ def dataworldData():
     #return the data
     return jsonify(dataworld_data_json_data)
 
-@app.route("/api/activity2.json")
+@app.route("/api/activity2")
 def activity2Data():
     # write a statement that finds all the items in the db and sets it to a variable
     activity2_data= list(activity2.find())
@@ -144,7 +144,7 @@ def activity2Data():
 
 
 
-@app.route("/api/latlong.json")
+@app.route("/api/latlong")
 def latlongData():
     # write a statement that finds all the items in the db and sets it to a variable
     latlong_data= list(latlong.find())
