@@ -13,7 +13,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(myMap);
 
 // Get data
-fetch("Project3-NationalTreasure/api/dataworld.json")
+fetch(dataworldurl)
 .then(function(response){return response.json()})
 .then(function(data){
   // console.log(data);
