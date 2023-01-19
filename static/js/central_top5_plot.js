@@ -20,7 +20,7 @@
 //   .catch(error => {
 //     console.log(error);
 //   });
-fetch("/api/kaggle.json")
+fetch("kaggledata")
   .then(response => {
     if (!response.ok) {
       throw new Error("HTTP error " + response.status);
